@@ -1,0 +1,30 @@
+{
+  "name": "console.fun",
+  "version": "0.1.1",
+  "description": "Not your grandmother's console.log",
+  "main": "src/console-fun.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc && ./node_modules/.bin/esbuild dist/console-fun.js --minify --outfile=dist/console-fun.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pgmccullough/console.fun.git"
+  },
+  "keywords": [
+    "fun",
+    "dev",
+    "tools"
+  ],
+  "author": "Patrick McCullough <p@mccullo.ug>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pgmccullough/console.fun/issues"
+  },
+  "homepage": "https://github.com/pgmccullough/console.fun#readme",
+  "dependencies": {
+    "esbuild": "0.18.11"
+  }
+}
