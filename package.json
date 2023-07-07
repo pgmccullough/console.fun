@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "tsc && ./node_modules/.bin/esbuild dist/console-fun.js --minify --outfile=dist/console-fun.min.js"
+    "build": "tsc && ./node_modules/.bin/esbuild dist/console-fun.js --bundle --allow-overwrite --outfile=dist/console-fun.js && ./node_modules/.bin/esbuild dist/console-fun.js --minify --outfile=dist/console-fun.min.js"
   },
   "repository": {
     "type": "git",
