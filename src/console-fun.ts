@@ -8,7 +8,11 @@ console.log = (message: string) => {
   cl(
     '%c ',
     `background-image: url(${ url });
-      padding-top: ${ width }px;
-      padding-left: ${ height *1.075 }px;`
+      padding-top: ${ height }px;
+      padding-left: ${ width * 0.95 }px;`
   );
 }
+
+console.error = console.log;
+console.warn = console.log;
+console.info = console.log;

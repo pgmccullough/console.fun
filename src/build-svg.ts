@@ -1,9 +1,9 @@
 export const buildSvg = (message: string) => {
   const logLineHt = 48*1.45;
   let logHt = logLineHt;
-  const logWid = window.innerWidth * 1.25;
-  let msgArr = message.split("");
-  const wordsPerLine = Math.floor(logWid/26);
+  const logWid = window.innerWidth;
+  let msgArr: string[] = message.split("");
+  const wordsPerLine = Math.floor(logWid/27);
   if(msgArr.length > wordsPerLine) {
     logHt*=Math.ceil(msgArr.length/wordsPerLine);
     msgArr = msgArr.map((msg:any,i:any) => {
@@ -31,7 +31,7 @@ export const buildSvg = (message: string) => {
         fill:#5fa41c;
         font-size:3rem;
         height: ${logHt}px;
-        width: ${logWid*1.075}px;
+        width: ${logWid}px;
         animation: 0.25s bgflash infinite step-end;
       }
       .text {
@@ -46,5 +46,5 @@ export const buildSvg = (message: string) => {
       <text x="0" y="50" font-family="Verdana" font-size="35" class="text">${msgArr.join("")}</text>
     </g>
   </svg>`
-  return {url: `data:image/svg+xml;base64,${btoa(bg)}`, width: logHt, height: logWid}
+  return {url: `data:image/svg+xml;base64,${btoa(bg)}`, width: logWid, height: logHt}
 }
