@@ -1,6 +1,6 @@
 {
   "name": "console.fun",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Not your grandmother's console.log",
   "main": "src/console-fun.js",
   "directories": {
