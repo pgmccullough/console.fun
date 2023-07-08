@@ -6,4 +6,4 @@
 ## Usage
 To bring your site's `console.logs` to life, simply insert the following code into any `html` file's  `<head>` tags:
 
-`<script src="https://cdn.jsdelivr.net/gh/pgmccullough/console.fun@latest/dist/console-fun.min.js"></script>`
+`<script src="https://cdn.jsdelivr.net/gh/pgmccullough/console.fun@v0.2.0/dist/console-fun.min.js"></script>`
