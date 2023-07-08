@@ -19,6 +19,6 @@ var buildSvg = function (message) {
         msgArr.push("</tspan>");
     }
     var bg = "<svg xmlns=\"http://www.w3.org/2000/svg\">\n    <style>\n      @keyframes bgflash {\n        0% {fill:#ff3ac6;}\n        50% {fill:#009b00;}\n      }\n      @keyframes textflash {\n        0% {fill:#5fa41c;}\n        50% {fill:#ff1a00;}\n      }\n      .background {\n        fill:#5fa41c;\n        font-size:3rem;\n        height: ".concat(logHt, "px;\n        width: ").concat(logWid, "px;\n        animation: 0.25s bgflash infinite step-end;\n      }\n      .text {\n        fill:#5fa41c;\n        font-size:3rem;\n        width: ").concat(logWid, "px;\n        animation: 0.25s textflash infinite step-end;     \n      }\n    </style>\n    <g>\n      <rect x=\"0\" y=\"0\" class=\"background\"></rect>\n      <text x=\"0\" y=\"50\" font-family=\"Verdana\" font-size=\"35\" class=\"text\">").concat(msgArr.join(""), "</text>\n    </g>\n  </svg>");
-    return { url: "data:image/svg+xml;base64,".concat(btoa(bg)), width: logWid, height: logHt };
+    return { url: "data:image/svg+xml;base64,".concat(btoa(unescape(encodeURIComponent(bg)))), width: logWid, height: logHt };
 };
 exports.buildSvg = buildSvg;

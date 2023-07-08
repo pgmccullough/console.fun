@@ -46,5 +46,5 @@ export const buildSvg = (message: string) => {
       <text x="0" y="50" font-family="Verdana" font-size="35" class="text">${msgArr.join("")}</text>
     </g>
   </svg>`
-  return {url: `data:image/svg+xml;base64,${btoa(bg)}`, width: logWid, height: logHt}
+  return {url: `data:image/svg+xml;base64,${btoa(unescape(encodeURIComponent(bg)))}`, width: logWid, height: logHt}
 }
